@@ -11,11 +11,12 @@ public class UIGoldcontroller : MonoBehaviour
     public Text RubbishCount;
     public Animator Anim;
     float Timer = 0;
-
+    public GameObject Sound;
 
     private void Start()
     {
         Anim = gameObject.GetComponent<Animator>();
+        Sound.SetActive(false);
     }
 
     public void Update()
@@ -26,10 +27,14 @@ public class UIGoldcontroller : MonoBehaviour
         {
             Timer += Time.deltaTime;
             Anim.SetBool("isStart", true);
-            if (Timer >= 17)
+            if (Timer >= 17.3f)
             {
                 gameObject.SetActive(false);
             }
+        }
+        if (_goldCount == 1)
+        {
+            Sound.SetActive(true);
         }
     }
     private void OnCollisionEnter(Collision collision)

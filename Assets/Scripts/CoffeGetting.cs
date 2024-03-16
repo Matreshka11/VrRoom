@@ -20,7 +20,7 @@ public class CoffeGetting : MonoBehaviour
 
     public void OnLaverEnter()
     {
-        Instantiate(CoffeCup, new Vector3(4.6f, 0.47f, 4.2f), Quaternion.identity);
+        Instantiate(CoffeCup, new Vector3(3.56f,0.41f,3.3f), Quaternion.identity);
             Count += 1;
             if (Count == 1)
             {
