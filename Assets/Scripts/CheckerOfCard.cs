@@ -6,6 +6,7 @@ public class CheckerOfCard : MonoBehaviour
 {
     private Animator _anim;
     public GameObject Door;
+    public GameObject MainDoor;
     private void Start()
     {
         _anim = Door.GetComponent<Animator>();
@@ -16,6 +17,7 @@ public class CheckerOfCard : MonoBehaviour
         if (collision.gameObject.CompareTag("Key"))
         {
             _anim.SetBool("isReady", true);
+            Destroy(MainDoor);
         }
     }
 }

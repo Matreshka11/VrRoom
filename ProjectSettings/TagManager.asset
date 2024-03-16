@@ -13,6 +13,10 @@ TagManager:
   - Projectile
   - Destroyer
   - Key
+  - Fire
+  - Gold
+  - Robot
+  - Rubbish
   layers:
   - Default
   - TransparentFX

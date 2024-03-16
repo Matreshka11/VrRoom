@@ -9,23 +9,32 @@ public class CoffeGetting : MonoBehaviour
     public GameObject CoffeCup;
     public GameObject Pojarr;
     public GameObject scriptActivator;
-    void Start()
+    private Animator _anim;
+    private int Count = 0;
+    void Awake()
     {
-        Door.SetActive(false);
         Pojarr.SetActive(false);
+        _anim = Door.GetComponent<Animator>();
     }
 
 
     public void OnLaverEnter()
     {
-        Door.SetActive(true);
-        Instantiate(CoffeCup, new Vector3(4.5f, 0.5f, 4.2f), Quaternion.identity);
+        Instantiate(CoffeCup, new Vector3(4.6f, 0.47f, 4.2f), Quaternion.identity);
+            Count += 1;
+            if (Count == 1)
+            {
+                scriptActivator.SetActive(true);
+            }
+        Door.SetActive(false);
+        
+
+        
+
     }
     public void OnlaverExit()
     {
-        Door.SetActive(false);
-        Pojarr.SetActive(true);
-        DoorKill.SetActive(false);
-        scriptActivator.SetActive(false);
+        Door.SetActive(true);
+
     }
 }

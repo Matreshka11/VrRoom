@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ColsionDetector : MonoBehaviour
 {
-    public GameObject pojar;
-    public GameObject stolik;
+    [SerializeField] GameObject pojar;
+    [SerializeField] GameObject stolik;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "stoll")
         {
+            pojar = GameObject.FindWithTag("Fire");
             Destroy(pojar);
-            Destroy(stolik);
             Destroy(gameObject);
         }
 
