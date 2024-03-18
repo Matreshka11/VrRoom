@@ -17,6 +17,7 @@ TagManager:
   - Gold
   - Robot
   - Rubbish
+  - Sound
   layers:
   - Default
   - TransparentFX

@@ -10,16 +10,13 @@ public class Script : MonoBehaviour
     public GameObject door;
     void Start()
     {
-      gameObject.SetActive(false);  
+        gameObject.SetActive(false);  
     }
-
-    // Update is called once per frame
     void Update()
     {
         timeer += Time.deltaTime;
         if(timeer > 5) 
         {
-            pojar.SetActive(true);
             door.SetActive(false);
         }
     }
